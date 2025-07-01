@@ -1,0 +1,121 @@
+.title-box{
+	text-align: center;
+	margin-top: 75px;
+
+}
+.title-box h2{
+	font-size: 34px;
+	font-family: 'Catamaran', sans-serif;
+	color: #222222;
+	font-weight: 500;
+	position: relative;
+	padding: 30px;
+	margin-bottom: 15px;
+	background-color: rgb(214, 214, 214);
+}
+
+.title-box h2::after{
+	content: "";
+	position: absolute;
+	background: url(/img/tag-line.png)no-repeat center;
+	width: 120px;
+	height: 20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 5px auto;
+}
+
+#banner img{
+	width: 100px;
+	height: 200px;
+	margin-left: 150px;
+}
+#banner1 img{
+	width: 160px;
+	padding: auto ;
+	margin-left: 150px;
+}
+#banner2 img{
+	width: 100px;
+	padding: auto ;
+	margin-left: 150px;
+}
+
+.access{
+	margin: 10px 0;
+	padding: 20px;
+	background-color: rgb(238, 238, 238);
+	width: 85%;
+}
+.kyro1{
+	padding-left: 40px;
+}
+
+.link{
+    background: #007bff;
+    border: 2px solid #007bff;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+	padding: 7px 10px;
+    border-radius: 5px;  
+    color: #fff;
+  }
+
+
+@media (max-width: 767px){
+	.access{
+		text-align: center;
+		margin: auto;
+	}
+	.banner{
+		margin: auto;
+		padding-left: 40px;
+	}
+}
+
+
+@media (max-width: 574px){
+	
+#banner img{
+	width: 100px;
+	height: 200px;
+	margin-left: 80px;
+}
+#banner1 img{
+	width: 130px;
+	padding: auto ;
+	margin-left: 70px;
+}
+#banner2 img{
+	width: 100px;
+	padding: auto ;
+	margin-left: 60px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+
+
+
+  .title-box{
+    text-align: center;
+    margin-top: 75px;
+  
+  }
+  .title-box h2{
+    font-size: 34px;
+    font-family: 'Catamaran', sans-serif;
+    color: #222222;
+    font-weight: 500;
+    position: relative;
+    padding: 30px;
+    margin-bottom: 15px;
+    background-color: rgb(214, 214, 214);
+  }
+  
+  .title-box h2::after{
+    content: "";
+    position: absolute;
+    background: url(/img/tag-line.png)no-repeat center;
+    width: 120px;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 5px auto;
+  }
+.banner{
+  width: 50%; 
+  text-align: center;
+}
+.banner img{
+  width: 300px;
+}
+
+.link{
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.link:hover{
+  color: black;
+}
+ 
+  @media (min-width: 992px) {
+    .link{
+        margin-left: 150px;
+    }
+  }
+  @media (max-width: 991px){
+    .link{
+        margin-left: 265px;
+    }
+
+  }
+  @media (max-width: 768px){
+      .link{
+          margin-left: 180px ;
+      }
+  }
+
+
+  @media (max-width: 574px) {
+    .link{
+        margin-left: 90px ;
+    }
+  }

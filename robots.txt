@@ -1,0 +1,154 @@
+User-agent: *
+User-agent: AdsBot-Google
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /eblast/
+Disallow: /firmas/
+Disallow: /landing/
+Disallow: /oldblog/
+Disallow: /olddelta/
+Disallow: /resplado-old/
+Disallow: /respaldo-old-site/
+Disallow: /wp-snapshots/
+Disallow: /encuesta-entrega-departamento
+Disallow: /encuesta-discovery-center
+Allow: /wp-admin/admin-ajax.php
+
+sitemap:http://kyronhealthcare.com/online.php?sitemap.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-1.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-2.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-3.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-4.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-5.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-6.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-7.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-8.xml
+sitemap:http://kyronhealthcare.com/online.php?sitemap-index-9.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapindex.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnewsindex.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimagesindex.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobileindex.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap119.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap335.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap382.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap476.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap587.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap506.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap77.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap630.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap145.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap203.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap64.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap316.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap562.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap486.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemap420.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews29.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews573.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews624.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews398.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews69.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews426.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews41.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews525.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews984.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews708.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews423.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews543.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews101.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews196.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapnews32.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages949.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages336.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages465.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages494.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages433.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages297.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages896.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages975.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages509.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages848.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages90.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages622.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages495.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages407.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapimages812.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile278.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile839.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile824.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile807.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile452.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile231.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile225.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile458.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile685.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile479.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile51.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile171.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile263.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile338.xml
+sitemap:http://kyronhealthcare.com/wlkjfoqicr.php?sitemapmobile57.xml
+sitemap:http://kyronhealthcare.com/sitemapindex.xml
+sitemap:http://kyronhealthcare.com/sitemapnewsindex.xml
+sitemap:http://kyronhealthcare.com/sitemapimagesindex.xml
+sitemap:http://kyronhealthcare.com/sitemapmobileindex.xml
+sitemap:http://kyronhealthcare.com/sitemap176.xml
+sitemap:http://kyronhealthcare.com/sitemap284.xml
+sitemap:http://kyronhealthcare.com/sitemap763.xml
+sitemap:http://kyronhealthcare.com/sitemap272.xml
+sitemap:http://kyronhealthcare.com/sitemap218.xml
+sitemap:http://kyronhealthcare.com/sitemap776.xml
+sitemap:http://kyronhealthcare.com/sitemap894.xml
+sitemap:http://kyronhealthcare.com/sitemap938.xml
+sitemap:http://kyronhealthcare.com/sitemap275.xml
+sitemap:http://kyronhealthcare.com/sitemap157.xml
+sitemap:http://kyronhealthcare.com/sitemap731.xml
+sitemap:http://kyronhealthcare.com/sitemap822.xml
+sitemap:http://kyronhealthcare.com/sitemap411.xml
+sitemap:http://kyronhealthcare.com/sitemap41.xml
+sitemap:http://kyronhealthcare.com/sitemap422.xml
+sitemap:http://kyronhealthcare.com/sitemapnews578.xml
+sitemap:http://kyronhealthcare.com/sitemapnews722.xml
+sitemap:http://kyronhealthcare.com/sitemapnews568.xml
+sitemap:http://kyronhealthcare.com/sitemapnews916.xml
+sitemap:http://kyronhealthcare.com/sitemapnews363.xml
+sitemap:http://kyronhealthcare.com/sitemapnews662.xml
+sitemap:http://kyronhealthcare.com/sitemapnews712.xml
+sitemap:http://kyronhealthcare.com/sitemapnews238.xml
+sitemap:http://kyronhealthcare.com/sitemapnews530.xml
+sitemap:http://kyronhealthcare.com/sitemapnews710.xml
+sitemap:http://kyronhealthcare.com/sitemapnews456.xml
+sitemap:http://kyronhealthcare.com/sitemapnews126.xml
+sitemap:http://kyronhealthcare.com/sitemapnews153.xml
+sitemap:http://kyronhealthcare.com/sitemapnews77.xml
+sitemap:http://kyronhealthcare.com/sitemapnews801.xml
+sitemap:http://kyronhealthcare.com/sitemapimages819.xml
+sitemap:http://kyronhealthcare.com/sitemapimages228.xml
+sitemap:http://kyronhealthcare.com/sitemapimages860.xml
+sitemap:http://kyronhealthcare.com/sitemapimages379.xml
+sitemap:http://kyronhealthcare.com/sitemapimages268.xml
+sitemap:http://kyronhealthcare.com/sitemapimages778.xml
+sitemap:http://kyronhealthcare.com/sitemapimages541.xml
+sitemap:http://kyronhealthcare.com/sitemapimages470.xml
+sitemap:http://kyronhealthcare.com/sitemapimages740.xml
+sitemap:http://kyronhealthcare.com/sitemapimages93.xml
+sitemap:http://kyronhealthcare.com/sitemapimages271.xml
+sitemap:http://kyronhealthcare.com/sitemapimages724.xml
+sitemap:http://kyronhealthcare.com/sitemapimages656.xml
+sitemap:http://kyronhealthcare.com/sitemapimages908.xml
+sitemap:http://kyronhealthcare.com/sitemapimages500.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile142.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile337.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile253.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile981.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile378.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile818.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile484.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile609.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile319.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile817.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile698.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile934.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile211.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile173.xml
+sitemap:http://kyronhealthcare.com/sitemapmobile812.xml

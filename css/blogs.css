@@ -1,0 +1,334 @@
+
+
+.title-box{
+	text-align: center;
+	margin-top: 75px;
+
+}
+.title-box h2{
+	font-size: 34px;
+	font-family: 'Catamaran', sans-serif;
+	color: #222222;
+	font-weight: 500;
+	position: relative;
+	padding: 30px;
+	margin-bottom: 15px;
+	background-color: rgb(214, 214, 214);
+}
+
+.title-box h2::after{
+	content: "";
+	position: absolute;
+	background: url(/img/tag-line.png)no-repeat center;
+	width: 120px;
+	height: 20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 5px auto;
+}
+
+.card-blog {
+    position: relative;
+    display: block;
+    max-width: 264px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+  }
+  
+  .card-blog .header {
+    width: 100%;
+    height: 140px;
+    background-color: #9A9F97;
+    overflow: hidden;
+  }
+  
+  .card-blog .header .post-thumb {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-blog .header .post-thumb img {
+    width: 100%;
+    transition: transform .2s linear;
+  }
+  
+  .card-blog .header .post-thumb:hover img {
+    transform: scale(1.2);
+  }
+  
+  .card-blog .body {
+    padding: 15px 20px;
+  }
+  
+  .card-blog .post-category {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 9;
+  }
+  
+  .card-blog .post-category a {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #0063f8;
+    color: #fff;
+    border-radius: 40px;
+  }
+  
+  .card-blog .post-category a:hover {
+    text-decoration: none;
+  }
+  
+  .card-blog .post-title,
+  .card-blog .post-title a {
+    color: #343531;
+  }
+  
+  .card-blog .post-title:hover,
+  .card-blog .post-title a:hover {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .card-blog .site-info {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #6D7170;
+  }
+  
+  .card-blog .avatar-img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .blog-details {
+    position: relative;
+    display: block;
+  }
+  
+  .blog-details .post-thumb {
+    position: relative;
+    display: block;
+    margin-bottom: 32px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(154, 159, 151, 0.3);
+  }
+  
+  .blog-details .post-title {
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+  
+  .blog-details .post-content {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #6E807A;
+  }
+  
+  .blog-details .post-thumb img {
+    width: 100%;
+  }
+  
+  .blog-details .post-meta {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+  }
+  
+  .blog-details .post-meta a {
+    color: #6E807A;
+  }
+  
+  .blog-details .post-meta a:hover {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .blog-details .post-meta .divider {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .blog-details .post-tags {
+    display: block;
+    padding: 16px 0;
+  }
+  
+  .blog-details .post-tags a {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #596261;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 40px;
+    transition: all .2s ease;
+  }
+  
+  .blog-details .post-tags a:hover {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .sidebar-block {
+    position: relative;
+    display: block;
+    padding: 15px 24px;
+    margin-bottom: 32px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #E8EEE4;
+    box-shadow: 0 4px 12px rgba(154, 159, 151, 0.2);
+  }
+  
+  .sidebar-block::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  
+  .sidebar-title {
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #596261;
+  }
+  
+  .sidebar-title::after {
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 40px;
+  }
+  
+  .search-form .form-group {
+    position: relative;
+  }
+  
+  .search-form .btn {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    transition: all .2s ease;
+  }
+  
+  .search-form .btn:hover {
+    background-color: #007bff;
+  }
+  
+  .categories {
+    position: relative;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .categories li {
+    display: block;
+    float: left;
+    margin-bottom: 12px;
+    width: 50%;
+  }
+  
+  .categories li a {
+    display: inline-block;
+    width: 90%;
+    padding: 6px 12px;
+    background-color: #E1EBE8;
+    color: #6E807A;
+    border-radius: 4px;
+    transition: all .2s ease;
+  }
+  
+  .categories li a:hover {
+    text-decoration: none;
+    background-color: #d5dfdc;
+    color: #596261;
+  }
+  
+  .categories li a span {
+    float: right;
+    margin-left: 8px;
+    padding: 3px 6px;
+    background-color: #6E807A;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 40px;
+  }
+  
+  
+  .blog-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E8EEE4;
+  }
+  
+  .blog-item .post-thumb {
+    flex-shrink: 0;
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    width: 100px;
+    height: 80px;
+    background-color: #A1AAA7;
+    overflow: hidden;
+  }
+  
+  .blog-item .post-thumb img {
+    width: auto;
+    height: 100%;
+  }
+  
+  .blog-item .post-title a {
+    color: #6D7170;
+    transition: all .2s ease;
+  }
+  
+  .blog-item .post-title a:hover {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .blog-item .meta a {
+    margin-right: 6px;
+    font-size: 12px;
+    color: #6E807A;
+  }
+  
+  .blog-item .meta a:hover {
+    text-decoration: none;
+  }
+.social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 6px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+  
+ .social-links a:hover {
+    background: #0067d5;
+    color: #fff;
+  }
