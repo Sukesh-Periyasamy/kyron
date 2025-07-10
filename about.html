@@ -27,8 +27,50 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/abt.css" rel="stylesheet">
- 
+ <style>
+.recognition-section {
+  
+  padding: 40px 0;
+  text-align: center;
+  overflow: hidden;
+}
 
+.recognition-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.logo-track img {
+  height: 60px;
+  margin: 0 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+</style>
   </head>
 <br><br>
 
@@ -110,7 +152,7 @@
 
                 
             </div>
-     <div style="text-align: center; background-color: #cacaca;">     <span style="font-weight:900;font-style: italic; font-size: large;">  KYRON HEALTHCARE PVT LTD is an ISO 9001 (2015) ISO 13485 and CE Certified Company.</span></div>  
+     <!-- <div style="text-align: center; background-color: #cacaca;">     <span style="font-weight:900;font-style: italic; font-size: large;">  KYRON HEALTHCARE PVT LTD is an ISO 9001 (2015) ISO 13485 and CE Certified Company.</span></div>   -->
         </div>
     </div>
 </div>
@@ -148,21 +190,27 @@
       ​</p>
     </header>
 
+<div class="recognition-section">
+  <h2>Recognitions & Certificates</h2>
+  <div class="logo-slider">
+    <div class="logo-track">
+      <!-- Your 5 logos -->
+      <img src="img/contact/logo1.png" alt="Logo 1">
+      <img src="img/contact/logo2.png" alt="Logo 2">
+      <img src="img/contact/logo3.png" alt="Logo 3">
+      <img src="img/contact/logo4.png" alt="Logo 4">
+      <img src="img/contact/logo5.png" alt="Logo 5">
 
-<div class="slider11">
-  <section class="auto-slider">
-    <div id="slider">
-        <figure>
-            <img src="img/1.jpg" alt="Image">
-            <img src="img/2.jpg" alt="Image">
-            <img src="img/3.jpg" alt="Image">
-            <img src="img/4.jpg" alt="Image">
-            <img src="img/4.jpg" alt="Image">
-        </figure>
-        <div class="indicator"></div>
+      <!-- Duplicated for smooth scrolling -->
+      <img src="img/contact/logo1.png" alt="Logo 1">
+      <img src="img/contact/logo2.png" alt="Logo 2">
+      <img src="img/contact/logo3.png" alt="Logo 3">
+      <img src="img/contact/logo4.png" alt="Logo 4">
+      <img src="img/contact/logo5.png" alt="Logo 5">
+    </div>
+  </div>
 </div>
-</section>
-</div>
+
 
 </body>
 
