@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TESTIMONIALS</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/abt.css" rel="stylesheet">
+ <style>
+.recognition-section {
+  
+  padding: 40px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recognition-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.logo-track img {
+  height: 60px;
+  margin: 0 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Testimonials Carousel Styles */
+.section-bg {
+  background: #f7f8fc;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.section-header h3 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: #666;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.testimonials-carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 2px solid #ddd;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+  background: #fff;
+  border-color: #007bff;
+  color: #007bff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.dot.active {
+  background-color: #007bff;
+  border-color: #007bff;
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 450px;
+    margin: 0 15px;
+  }
+  
+  .section-header h3 {
+    font-size: 28px;
+  }
+  
+  .section-header p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+  
+  .prev-btn {
+    left: 15px;
+  }
+  
+  .next-btn {
+    right: 15px;
+  }
+  
+  .testimonials-carousel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 350px;
+    margin: 0 10px;
+  }
+  
+  .section-header h3 {
+    font-size: 24px;
+  }
+  
+  .section-header p {
+    font-size: 14px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  .testimonial-slide {
+    padding: 15px;
+  }
+}
+
+</style>
+  </head>
+<br><br>
+
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a href="index.html" class=""><img src="img/logo_new.png" alt="LOGO" class="img-fluid" ></a>
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="about.html">About Us</a></li>
+
+          <li class="drop-down"><a href="main_product.html">Products</a>
+            <ul>
+
+                <li><a href="neonatal.html">Neonatal and Pediatric Care</a></li>
+               <li><a href="adult.html">Adult and Pediatric Care</a></li>
+                <li><a href="humidifier.html">Humidifier</a></li>
+                <li><a href="accessories.html">Accessories and circuits</a></li>
+            </ul>
+          </li>
+         
+          <li class="active"><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="bookademo.html">Book a Demo</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header>
+
+
+<body>
+  
+  <!-- Main Content Section -->
+  <section id="testimonials" class="section-bg" style="padding: 100px 0 80px 0;">
+    <div class="container">
+      
+      <header class="section-header">
+        <h3>What Our Clients Say</h3>
+        <p>Trusted by healthcare professionals</p>
+      </header>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          
+          <!-- Testimonials Carousel -->
+          <div class="testimonials-carousel">
+            
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+              
+              <!-- Testimonial Slides -->
+              <div class="testimonial-slide active">
+                <img src="img/testimonial/1.jpeg" alt="Testimonial 1" class="testimonial-image">
+              </div>
+              
+              <div class="testimonial-slide">
+                <img src="img/testimonial/2.jpeg" alt="Testimonial 2" class="testimonial-image">
+              </div>
+              
+              <div class="testimonial-slide">
+                <img src="img/testimonial/3.jpeg" alt="Testimonial 3" class="testimonial-image">
+              </div>
+              
+              <!-- Navigation Arrows -->
+              <button class="carousel-btn prev-btn" onclick="previousSlide()">
+                <i class="fa fa-chevron-left"></i>
+              </button>
+              
+              <button class="carousel-btn next-btn" onclick="nextSlide()">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+              
+            </div>
+            
+            <!-- Dots Indicator -->
+            <div class="carousel-dots">
+              <span class="dot active" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+</body>
+
+
+     <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+         <div class="col-lg-7 col-md-7 footer-info">
+  <h1>KYRON HEALTHCARE</h1><br>
+
+  <h4>Address</h4>
+  358, First & Second Floor, Patparganj Industrial Area,<br>
+  New Delhi - 110092<br><br>
+</div>
+
+          <div class="col-lg-5 col-md-5 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              TEL: +91-11-41629088 <br> MOB No: +919315942627<br>
+              <strong>Email:</strong> kyronhealthcare@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+               <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+               <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a> 
+              <a href="#" class="linkedin"><i class="fa fa-whatsapp"></i></a>
+            </div>
+
+          </div>
+
+      
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>KYRON HEALTHCARE Pvt Ltd</strong><br>All Rights Reserved
+      </div>
+      <div class="credits">
+    </div>
+  </footer><!-- #footer -->
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/mobile-nav/mobile-nav.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<!-- Contact Form JavaScript File -->
+<script src="contactform/contactform.js"></script>
+
+<!--  Main Javascript File -->
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+  // Testimonials Carousel JavaScript
+  let currentSlideIndex = 0;
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.dot');
+  const totalSlides = slides.length;
+  
+  // Auto-slide interval
+  let autoSlideInterval;
+  
+  // Function to show specific slide
+  function showSlide(index) {
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    
+    currentSlideIndex = index;
+  }
+  
+  // Function to go to next slide
+  function nextSlide() {
+    const nextIndex = (currentSlideIndex + 1) % totalSlides;
+    showSlide(nextIndex);
+    resetAutoSlide();
+  }
+  
+  // Function to go to previous slide
+  function previousSlide() {
+    const prevIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+    showSlide(prevIndex);
+    resetAutoSlide();
+  }
+  
+  // Function to go to specific slide (for dots)
+  function currentSlide(index) {
+    showSlide(index - 1); // Convert to 0-based index
+    resetAutoSlide();
+  }
+  
+  // Function to start auto-slide
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+  }
+  
+  // Function to reset auto-slide
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+  
+  // Initialize carousel when page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    showSlide(0); // Show first slide
+    startAutoSlide(); // Start auto-sliding
+    
+    // Pause auto-slide when user hovers over carousel
+    const carousel = document.querySelector('.testimonials-carousel');
+    carousel.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    carousel.addEventListener('mouseleave', startAutoSlide);
+  });
+  
+  // Original counter script (keeping it as it was)
+  var counter = 0;
+  setInterval(function(){
+    const radioElement = document.getElementById('radio' + counter);
+    if (radioElement) {
+      radioElement.checked = true;
+    }
+    counter++;
+    if(counter > 3){
+      counter = 0;
+    }
+  }, 3000);
+</script>
+
+
+  </html>
