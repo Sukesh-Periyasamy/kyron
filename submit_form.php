@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Capture and sanitize form data
     $firstName = sanitize_input($_POST["firstName"]);
-    $lastName = sanitize_input($_POST["lastName"]);
+    $companyName = sanitize_input($_POST["companyName"]);
     $email = sanitize_input($_POST["email"]);
     $phone = sanitize_input($_POST["phone"]);
     $product = sanitize_input($_POST["product"]);
@@ -27,7 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "First Name is required";
     }
     
-    // Last name is optional - no validation needed
+    if (empty($companyName)) {
+        $errors[] = "Company Name is required";
+    }
     
     if (empty($email)) {
         $errors[] = "Email is required";
@@ -54,13 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Email configuration
         $to_email = "kyronhealthcare@gmail.com";
-        $fullName = trim($firstName . " " . $lastName);
+        $fullName = $firstName . " - " . $companyName;
         $subject = "New Demo Request - " . $fullName;
         
         // Create email content
         $email_body = "New Demo Request Received\n\n";
         $email_body .= "Submission Time: " . $timestamp . "\n";
-        $email_body .= "Name: " . $fullName . "\n";
+        $email_body .= "Name: " . $firstName . "\n";
+        $email_body .= "Company: " . $companyName . "\n";
         $email_body .= "Email: " . $email . "\n";
         $email_body .= "Phone: " . $phone . "\n";
         $email_body .= "Product of Interest: " . $product . "\n";
@@ -83,7 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $customer_body .= "We have received your demo request for: " . $product . "\n\n";
         $customer_body .= "Our team will contact you within 24 hours to schedule your demonstration.\n\n";
         $customer_body .= "Request Details:\n";
-        $customer_body .= "Name: " . $fullName . "\n";
+        $customer_body .= "Name: " . $firstName . "\n";
+        $customer_body .= "Company: " . $companyName . "\n";
         $customer_body .= "Email: " . $email . "\n";
         $customer_body .= "Phone: " . $phone . "\n";
         $customer_body .= "Product: " . $product . "\n";
@@ -141,7 +145,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         </tr>
                                         <tr>
                                             <td><strong>Name:</strong></td>
-                                            <td><?php echo $fullName; ?></td>
+                                            <td><?php echo $firstName; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Company:</strong></td>
+                                            <td><?php echo $companyName; ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Email:</strong></td>
