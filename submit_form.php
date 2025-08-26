@@ -27,9 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "First Name is required";
     }
     
-    if (empty($lastName)) {
-        $errors[] = "Last Name is required";
-    }
+    // Last name is optional - no validation needed
     
     if (empty($email)) {
         $errors[] = "Email is required";
@@ -56,12 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Email configuration
         $to_email = "kyronhealthcare@gmail.com";
-        $subject = "New Demo Request - " . $firstName . " " . $lastName;
+        $fullName = trim($firstName . " " . $lastName);
+        $subject = "New Demo Request - " . $fullName;
         
         // Create email content
         $email_body = "New Demo Request Received\n\n";
         $email_body .= "Submission Time: " . $timestamp . "\n";
-        $email_body .= "Name: " . $firstName . " " . $lastName . "\n";
+        $email_body .= "Name: " . $fullName . "\n";
         $email_body .= "Email: " . $email . "\n";
         $email_body .= "Phone: " . $phone . "\n";
         $email_body .= "Product of Interest: " . $product . "\n";
@@ -84,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $customer_body .= "We have received your demo request for: " . $product . "\n\n";
         $customer_body .= "Our team will contact you within 24 hours to schedule your demonstration.\n\n";
         $customer_body .= "Request Details:\n";
-        $customer_body .= "Name: " . $firstName . " " . $lastName . "\n";
+        $customer_body .= "Name: " . $fullName . "\n";
         $customer_body .= "Email: " . $email . "\n";
         $customer_body .= "Phone: " . $phone . "\n";
         $customer_body .= "Product: " . $product . "\n";
@@ -142,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         </tr>
                                         <tr>
                                             <td><strong>Name:</strong></td>
-                                            <td><?php echo $firstName . " " . $lastName; ?></td>
+                                            <td><?php echo $fullName; ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Email:</strong></td>

@@ -411,9 +411,9 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="lastName" class="form-label">
-                  Last Name <span class="required">*</span>
+                  Last Name
                 </label>
-                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                <input type="text" class="form-control" id="lastName" name="lastName">
               </div>
             </div>
           </div>
@@ -439,17 +439,13 @@
 
           <div class="form-group">
             <label for="product" class="form-label">
-              Product of Interest <span class="required">*</span>
+              Select your product of interest <span class="required">*</span>
             </label>
             <select class="form-control" id="product" name="product" required>
               <option value="" disabled selected>Please select a product</option>
-              <option value="Bubble CPAP">Bubble CPAP</option>
-              <option value="High Flow Nasal Cannula">High Flow Nasal Cannula</option>
-              <option value="Ventilator Circuits">Ventilator Circuits</option>
+              <option value="Respiassist">Respiassist</option>
+              <option value="Air Oxygen Blender">Air Oxygen Blender</option>
               <option value="Humidifier">Humidifier</option>
-              <option value="Oxygen Blender">Oxygen Blender</option>
-              <option value="Complete Ventilation Solution">Complete Ventilation Solution</option>
-              <option value="Other">Other</option>
             </select>
           </div>
 
@@ -458,7 +454,7 @@
               Additional Requirements <span class="required">*</span>
             </label>
             <textarea class="form-control" id="message" name="message" rows="4" required 
-                      placeholder="Please describe your requirements, preferred demo date/time, or any specific questions..."></textarea>
+                      placeholder="If any..."></textarea>
           </div>
 
           <button type="submit" class="submit-btn" id="submitBtn" disabled>
