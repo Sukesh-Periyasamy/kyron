@@ -106,6 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Display success message and form data
         ?>
+        ?>
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -115,82 +116,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
             <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
             <link href="css/style.css" rel="stylesheet">
+            <style>
+                .centered-success {
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            </style>
         </head>
         <body>
-            <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card shadow-lg">
-                            <div class="card-header bg-success text-white text-center">
-                                <h3 class="mb-0"><i class="fa fa-check-circle"></i> Demo Request Submitted Successfully!</h3>
-                            </div>
-                            <div class="card-body p-4">
-                                <div class="alert alert-success">
-                                    <h4>Thank you for your interest in Kyron Healthcare!</h4>
-                                    <p>Your demo request has been received and emailed to our team. We will contact you within 24 hours to schedule your demonstration.</p>
-                                    <?php if ($email_sent): ?>
-                                    <p><i class="fa fa-envelope text-success"></i> Notification sent to: kyronhealthcare@gmail.com</p>
-                                    <?php endif; ?>
-                                    <?php if ($customer_email_sent): ?>
-                                    <p><i class="fa fa-envelope text-success"></i> Confirmation email sent to: <?php echo $email; ?></p>
-                                    <?php endif; ?>
-                                </div>
-                                
-                                <h5>Request Details:</h5>
-                                <div class="table-responsive">
-                                    <table class="table table-bordered">
-                                        <tr>
-                                            <td><strong>Submission Time:</strong></td>
-                                            <td><?php echo $timestamp; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Name:</strong></td>
-                                            <td><?php echo $firstName; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Company:</strong></td>
-                                            <td><?php echo $companyName; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Email:</strong></td>
-                                            <td><?php echo $email; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Phone:</strong></td>
-                                            <td><?php echo $phone; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Product of Interest:</strong></td>
-                                            <td><?php echo $product; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Additional Requirements:</strong></td>
-                                            <td><?php echo nl2br($message); ?></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                
-                                <div class="text-center mt-4">
-                                    <a href="index.html" class="btn btn-outline-primary btn-sm" style="min-width:120px;">Return to Home</a>
-                                </div>
-                                
-                                <div class="mt-4 text-center">
-                                    <h6>Need immediate assistance?</h6>
-                                    <p>
-                                        <i class="fa fa-phone"></i> Call us: +91-11-41629088 or +919315942627<br>
-                                        <i class="fa fa-envelope"></i> Email: Info@kyronhealthcare.com
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="centered-success">
+                <div class="card shadow-lg p-4 text-center" style="max-width: 400px; width: 100%;">
+                    <div class="mb-3">
+                        <span class="fa fa-check-circle text-success" style="font-size: 2.5rem;"></span>
                     </div>
+                    <h4 class="mb-3">Demo Request Submitted Successfully!</h4>
+                    <p class="mb-4">Thank you for your interest. We’ll get back to you soon.</p>
+                    <a href="index.html" class="btn btn-primary btn-block">Return to Home</a>
                 </div>
             </div>
         </body>
         </html>
         <?php
-        
-        // Optional: Log the submission to a file
         $log_entry = "\n--- Demo Request ---\n";
         $log_entry .= "Timestamp: " . $timestamp . "\n";
         $log_entry .= "Name: " . $firstName . " " . $lastName . "\n";
