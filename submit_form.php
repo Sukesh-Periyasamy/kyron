@@ -1,6 +1,18 @@
 <?php
 // submit_form.php - Demo Booking Form Handler
 
+// Force HTTPS for form submissions
+if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
+    $secure_url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('Location: ' . $secure_url, true, 301);
+    exit();
+}
+
+// Security headers
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('X-XSS-Protection: 1; mode=block');
+
 // Check if the form was submitted via POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
