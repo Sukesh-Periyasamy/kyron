@@ -41,32 +41,23 @@
   font-weight: bold;
 }
 
-.logo-slider {
-  overflow: hidden;
-  position: relative;
+.static-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
-.logo-track {
+.logo-row {
   display: flex;
-  width: fit-content;
-  animation: scroll-left 30s linear infinite;
+  align-items: center;
+  gap: 40px;
 }
 
-.logo-track img {
+.logo-row img {
   height: 60px;
-  margin: 0 40px;
   object-fit: contain;
   flex-shrink: 0;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
 
 
@@ -196,14 +187,8 @@
 
 <div class="recognition-section">
   <h2>Recognitions & Certificates</h2>
-  <div class="logo-slider">
-    <div class="logo-track">
-      <!-- Your 5 logos -->
-      <img src="img/contact/logo1.png" alt="Logo 1">
-      <img src="img/contact/logo2.png" alt="Logo 2">
-      <img src="img/contact/logo3.png" alt="Logo 3">
-
-      <!-- Duplicated for smooth scrolling -->
+  <div class="static-logos">
+    <div class="logo-row">
       <img src="img/contact/logo1.png" alt="Logo 1">
       <img src="img/contact/logo2.png" alt="Logo 2">
       <img src="img/contact/logo3.png" alt="Logo 3">

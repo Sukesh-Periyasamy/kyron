@@ -1,0 +1,75 @@
+CSS SCROLL ANIMATION CODE
+========================
+
+This is the CSS code that was used for the scrolling logo animation in the recognition section:
+
+/* CSS Styles for Scrolling Logo Animation */
+.recognition-section {
+  padding: 40px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recognition-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.logo-track img {
+  height: 60px;
+  margin: 0 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* HTML Structure for Scrolling Animation */
+<div class="recognition-section">
+  <h2>Recognitions & Certificates</h2>
+  <div class="logo-slider">
+    <div class="logo-track">
+      <!-- Original logos -->
+      <img src="img/contact/logo1.png" alt="Logo 1">
+      <img src="img/contact/logo2.png" alt="Logo 2">
+      <img src="img/contact/logo3.png" alt="Logo 3">
+      <img src="img/contact/logo4.png" alt="Logo 4">
+      <img src="img/contact/logo5.png" alt="Logo 5">
+
+      <!-- Duplicated logos for smooth scrolling -->
+      <img src="img/contact/logo1.png" alt="Logo 1">
+      <img src="img/contact/logo2.png" alt="Logo 2">
+      <img src="img/contact/logo3.png" alt="Logo 3">
+      <img src="img/contact/logo4.png" alt="Logo 4">
+      <img src="img/contact/logo5.png" alt="Logo 5">
+    </div>
+  </div>
+</div>
+
+How it works:
+- The .logo-slider creates a container with hidden overflow
+- The .logo-track contains all the logos in a flex row
+- The animation moves the track from 0 to -50% (which is why we duplicate the logos)
+- The 30s duration makes it scroll slowly
+- The infinite keyword makes it loop continuously
+- The linear timing function ensures constant speed
