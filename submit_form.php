@@ -171,12 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 
                                 <div class="text-center mt-4">
-                                    <a href="index.html" class="btn btn-primary">
-                                        <i class="fa fa-home"></i> Return to Home
-                                    </a>
-                                    <a href="bookademo.html" class="btn btn-secondary">
-                                        <i class="fa fa-calendar"></i> Book Another Demo
-                                    </a>
+                                    <a href="index.html" class="btn btn-outline-primary btn-sm" style="min-width:120px;">Return to Home</a>
                                 </div>
                                 
                                 <div class="mt-4 text-center">
