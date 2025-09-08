@@ -466,6 +466,64 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }
   flex-shrink: 0;
 }
 
+/* Mobile responsive styles for recognition logos */
+@media (max-width: 768px) {
+  .recognition-section {
+    padding: 30px 15px;
+  }
+  
+  .recognition-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .logo-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-row img {
+    height: 50px;
+    max-width: 150px;
+    width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .recognition-section {
+    padding: 20px 10px;
+  }
+  
+  .recognition-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  .logo-row {
+    gap: 15px;
+  }
+  
+  .logo-row img {
+    height: 40px;
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .logo-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .logo-row img {
+    height: 45px;
+    max-width: 140px;
+  }
+}
+
 	</style>
 </head>
 <body><!--==========================
