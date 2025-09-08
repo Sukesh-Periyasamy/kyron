@@ -434,6 +434,38 @@ a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], a[h
 .zergnet-widget-container, .zergnet-widget__header, .zergnet-widget__subtitle, .zergnetBLock, .zergnet__container, .zergnetpower, .zergpowered, display-ad-component, div[id^="zergnet-widget"], .section-subheader > .section-hotel-prices-header, amp-embed[type="taboola"], #qoo-counter, #ramblerCounter, #top100counter, .plugin-daily_count, a[href^="http://click.hotlog.ru/"], a[href^="http://hitcounter.ru/top/stat.php"], a[href^="http://metrika.yandex.ru/stat/"], a[href^="http://top.mail.ru/jump"], a[href^="http://top100.rambler.ru/"], a[href^="http://www.liveinternet.ru/stat/"], a[href^="https://metrika.yandex.ru/stat/"], a[href^="https://top.mail.ru/jump"], img[src*="counter.yadro.ru"], img[src^="http://c.bigmir.net/"], img[width="88"][height="31"] { display: none!important; }
 .pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }
+
+.recognition-section {
+  padding: 40px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recognition-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.static-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo-row img {
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 	</style>
 </head>
 <body><!--==========================
@@ -450,7 +482,7 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }
 	<li class="drop-down"><a href="main_product.html">Products</a>
 	<ul>
 		<li><a href="neonatal.html">Neonatal and Pediatric Care</a></li>
-		<li><a href="adult.html">Adult and Pediatric Care</a></li>
+		<li><a href="respiassist.html">Adult and Pediatric Care</a></li>
 		<li><a href="humidifier.html">Humidifier</a></li>
 	</ul>
 	</li>
@@ -465,20 +497,10 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }
     Intro Section
   ============================-->
 
-<section class="clearfix" id="intro">
-<div class="container">
-<div class="intro-img"><img alt="" class="img-fluid" src="img/isolast.png" /></div>
-
-<div class="intro-info"><!--<h2><span>KYRON HEALTHCARE</span><br></h2>-->
-<section class="home" id="home">
-<div class="home-content">
-<div class="text-2">KYRON HEALTHCARE</div>
-
-<div class="text-3"><span style="font-weight: 500;">INOVATIVE MEDICAL DEVICES </span></div>
-</div>
-</section>
-
-<div><a class="btn-get-started scrollto" href="#about">Get Started</a> <a class="btn-services " href="main_product.html">Our Resources</a></div>
+<section class="clearfix" id="intro" style="margin: 0; padding: 0 !important; background: none !important; background-image: none !important; position: relative;">
+<div class="container-fluid" style="margin: 0; padding: 0;">
+<div class="intro-design" style="margin: 0; padding: 0; line-height: 0;">
+<img alt="Kyron Healthcare" class="img-fluid" src="img/newdesign.png" style="display: block; width: 100%; height: auto; margin: 0; padding: 0; border: none;" />
 </div>
 </div>
 </section>
@@ -489,60 +511,87 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }
     ============================-->
 <section id="about">
 <div class="container">
-<div id="products">
 <header class="section-header">
-<section id="about">
-<div class="container">
-<header class="section-header">
-<h3 style="text-align: center;">AUTOFLOW MODE WITH SPO2 MONITORING</h3>
-
-<p>Maintains the spo2 of the patient with in target range by automatically adjusting Fio2 and total Gas flow / CPAP pressure depending on the Therapy option selected. Our indigenous algorithm is used to precisely monitor the spo2 and take corrective actions. ​</p>
-</header>
-</div>
-
 <h2>FEATURED PRODUCTS</h2>
-</section>
+<p>Advanced Medical Devices for Respiratory Care and Emergency Support</p>
 </header>
 
-<div class="row row1" style="justify-content: center; align-items: center;">
-<div class="card"><a href="adult.html"><img alt="" src="img/adult_hc1.jpeg" style="width:100%" /> </a>
+<div class="row" style="justify-content: center; align-items: stretch; gap: 30px; padding: 20px 0;">
+  <div class="product-card" style="width: 320px; background: #fff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); overflow: hidden; transition: all 0.3s ease; border: none;">
+    <div style="position: relative; overflow: hidden;">
+      <a href="neonatal.html">
+        <img alt="Neonatal and Pediatric Care" src="img/products/respiassist.jpg" style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s ease;" />
+      </a>
+    </div>
+    <div style="padding: 25px 20px; text-align: center;">
+      <h4 style="color: #2c3e50; font-weight: 600; margin: 0 0 10px 0; font-size: 18px; line-height: 1.4;">
+        <a href="neonatal.html" style="color: #2c3e50; text-decoration: none; transition: color 0.3s ease;">Neonatal and Pediatric Care</a>
+      </h4>
+      <p style="color: #7f8c8d; font-size: 14px; margin: 0 0 20px 0; line-height: 1.5;">Advanced respiratory support for delicate lives</p>
+      <a href="neonatal.html" style="display: inline-block; background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.3s ease;">Learn More</a>
+    </div>
+  </div>
 
-<h4><a href="adult.html">ANNUFLOW-HC</a></h4>
-<a href="adult.html"> <!-- <p></p>
-          <p><button> About </button></p> --> </a></div>
-<!-- <div class="portfolio-wrap">
-          <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4><a href="#">App 1</a></h4>
-            <p>App</p>
-            <div>
-              <a href="img/adult_hc1.jpeg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview">
-              
-              </a>
-              <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </div>
-          </div>
-        </div> -->
+  <div class="product-card" style="width: 320px; background: #fff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); overflow: hidden; transition: all 0.3s ease; border: none;">
+    <div style="position: relative; overflow: hidden; height: 200px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); display: flex; align-items: center; justify-content: center;">
+      <a href="respiassist.html" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+        <div style="text-align: center; color: #6c757d;">
+          <i class="fa fa-clock" style="font-size: 3rem; margin-bottom: 15px; color: #007bff;"></i>
+          <h3 style="color: #495057; font-weight: 600; margin: 0; font-size: 1.5rem;">Coming Soon</h3>
+        </div>
+      </a>
+    </div>
+    <div style="padding: 25px 20px; text-align: center;">
+      <h4 style="color: #2c3e50; font-weight: 600; margin: 0 0 10px 0; font-size: 18px; line-height: 1.4;">
+        <a href="respiassist.html" style="color: #2c3e50; text-decoration: none; transition: color 0.3s ease;">RespiAssist Advance</a>
+      </h4>
+      <p style="color: #7f8c8d; font-size: 14px; margin: 0 0 20px 0; line-height: 1.5;">Launching Soon - Professional emergency respiratory support</p>
+      <a href="respiassist.html" style="display: inline-block; background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.3s ease;">Learn More</a>
+    </div>
+  </div>
 
-<div class="card"><a href="neonatal.html"><img alt="" src="img/annuflow_bc1.png" style="width:100%" /> </a>
-
-<h4><a href="neonatal.html">ANNUFLOW-BC</a></h4>
-<a href="neonatal.html"> </a></div>
-
-<div class="card"><a href="humidifier.html"><img alt="" src="img/humid.jpeg" style="width:100% ;padding: 20px 0;" /> </a>
-
-<h4><a href="humidifier.html">HUMIDIFIER</a></h4>
-<a href="humidifier.html"> <!-- <p></p>
-          <p><button><a href="humidifier.html" > About</a> </button></p> --> </a></div>
+  <div class="product-card" style="width: 320px; background: #fff; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); overflow: hidden; transition: all 0.3s ease; border: none;">
+    <div style="position: relative; overflow: hidden;">
+      <a href="humidifier.html">
+        <img alt="Medical Humidifier" src="img/products/humidifier-khc1000.jpg" style="width: 100%; height: 200px; object-fit: cover; padding: 15px; transition: transform 0.3s ease;" />
+      </a>
+    </div>
+    <div style="padding: 25px 20px; text-align: center;">
+      <h4 style="color: #2c3e50; font-weight: 600; margin: 0 0 10px 0; font-size: 18px; line-height: 1.4;">
+        <a href="humidifier.html" style="color: #2c3e50; text-decoration: none; transition: color 0.3s ease;">Humidifier</a>
+      </h4>
+      <p style="color: #7f8c8d; font-size: 14px; margin: 0 0 20px 0; line-height: 1.5;">Precision humidification for safer therapy</p>
+      <a href="humidifier.html" style="display: inline-block; background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.3s ease;">Learn More</a>
+    </div>
+  </div>
 </div>
-</div>
+
+<style>
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card a[style*="Learn More"]:hover {
+  background: linear-gradient(135deg, #0056b3, #004085) !important;
+  transform: translateY(-2px);
+}
+
+.product-card h4 a:hover {
+  color: #007bff !important;
+}
+</style>
 </div>
 </section>
 <!-- #about --><!--==========================
       Why Us Section
     ============================-->
 
-<section class="wow fadeIn" id="why-us">
+<!-- <section class="wow fadeIn" id="why-us">
 <div class="container">
 <header class="section-header">
 <h3 style=" color: #004a99;">COMPANY CERTIFICATION AND RECOGNITION</h3>
@@ -553,38 +602,50 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }
 <div class="card wow ">
 <div class="card-body">
 <h5 class="card-title" style="padding-top: 30px;">MSME</h5>
-<!-- <p class="card-text">Ministry of Micro, Small and Medium Enterprises</p> --><!-- <a href="#" class="readmore">Read more </a> --></div>
+<p class="card-text">Ministry of Micro, Small and Medium Enterprises</p><a href="#" class="readmore">Read more </a></div>
 </div>
 </div>
 
 <div class="col-lg-3 mb-2">
-<div class="card wow"><!-- <i class="fa fa-language"></i> -->
+<div class="card wow"><i class="fa fa-language"></i>
 <div class="card-body">
 <h5 class="card-title">DIPP STARTUP INDIA</h5>
-<!-- <p class="card-text">Department for Promotion of Industry and Internal Trade</p> --><!-- <a href="#" class="readmore">Read more </a> --></div>
+<p class="card-text">Department for Promotion of Industry and Internal Trade</p><a href="#" class="readmore">Read more </a></div>
 </div>
 </div>
 
 <div class="col-lg-3 mb-2">
-<div class="card wow "><!-- <i class="fa fa-object-group"></i> -->
+<div class="card wow "><i class="fa fa-object-group"></i>
 <div class="card-body">
 <h5 class="card-title" style="padding-top: 10px;">ISO CERTIFIED</h5>
-<!-- <p class="card-text">ISO - 9001:2015 <br> ISO- 13485:2016 </p> --><!-- <a href="#" class="readmore">Read more </a> --></div>
+<p class="card-text">ISO - 9001:2015 <br> ISO- 13485:2016 </p><a href="#" class="readmore">Read more </a></div>
 </div>
 </div>
 
 <div class="col-lg-3 mb-2">
-<div class="card wow"><!-- <i class="fa fa-object-group"></i> -->
+<div class="card wow"><i class="fa fa-object-group"></i>
 <div class="card-body">
 <h5 class="card-title" style="padding-top: 0">Europian Certificate<br />
 CE</h5>
-<!-- <p class="card-text"> <br>EUROPIAN CERTIFICATE </p> --><!-- <a href="#" class="readmore">Read more </a> --></div>
+<p class="card-text"> <br>EUROPIAN CERTIFICATE </p><a href="#" class="readmore">Read more </a></div>
 </div>
 </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- #team --></main>
+
+<div class="recognition-section">
+  <h2>Recognitions & Certificates</h2>
+  <div class="static-logos">
+    <div class="logo-row">
+      <img src="img/contact/logo1.png" alt="Logo 1">
+      <img src="img/contact/logo2.png" alt="Logo 2">
+      <img src="img/contact/logo3.png" alt="Logo 3">
+    </div>
+  </div>
+</div>
+
 <!--==========================
     Footer
   ============================-->
