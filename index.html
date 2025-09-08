@@ -524,6 +524,33 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }
   }
 }
 
+/* Hide intro image on mobile devices */
+@media (max-width: 768px) {
+  #intro {
+    display: none !important;
+  }
+  
+  /* Adjust main content margin since intro is hidden */
+  #main {
+    margin-top: 75px; /* Height of fixed header */
+  }
+  
+  /* Ensure products section is the first visible content */
+  #about {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  #main {
+    margin-top: 60px; /* Smaller margin for mobile */
+  }
+  
+  #about {
+    padding-top: 20px;
+  }
+}
+
 	</style>
 </head>
 <body><!--==========================
