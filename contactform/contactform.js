@@ -1,6 +1,7 @@
 /**
  * Contact Form JavaScript
  * Handles form submission and validation for Kyron Healthcare contact form
+ * Uses Formspree for secure form handling
  */
 
 $(document).ready(function() {
@@ -32,21 +33,25 @@ $(document).ready(function() {
     $('#errormessage').hide();
     $('.loading').show();
     
-    // Simulate form submission (since we're using mailto)
-    setTimeout(function() {
-      $('.loading').hide();
-      showMessage('Thank you! Your message has been sent. We will get back to you soon.', 'success');
-      
-      // Create mailto link and open it
-      var mailtoLink = 'mailto:Info@kyronhealthcare.com' +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-      
-      window.location.href = mailtoLink;
-      
-      // Reset form
-      $('#contactForm')[0].reset();
-    }, 1000);
+    // Submit form to Formspree
+    var formData = new FormData(this);
+    
+    $.ajax({
+      url: 'https://formspree.io/f/xvgpgzjw',
+      method: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(response) {
+        $('.loading').hide();
+        showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
+        $('#contactForm')[0].reset();
+      },
+      error: function(xhr, status, error) {
+        $('.loading').hide();
+        showMessage('Sorry, there was an error sending your message. Please try again or contact us directly at Info@kyronhealthcare.com', 'error');
+      }
+    });
     
     return false;
   });
