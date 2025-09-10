@@ -8,7 +8,7 @@
   <meta content="" name="description">
   
   <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://www.google.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://maps.googleapis.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://www.google.com https://www.googletagmanager.com https://kit.fontawesome.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com https://kit.fontawesome.com; font-src 'self' https://fonts.gstatic.com https://kit.fontawesome.com; img-src 'self' data: https: http:; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https://maps.googleapis.com https://ka-f.fontawesome.com; form-action 'self' mailto:;">
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -107,9 +107,10 @@
               </div>
   
               <div class="form">
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-                <form action="mailto:Info@kyronhealthcare.com" method="post" role="form" enctype="text/plain" class="contactForm">
+                <div id="sendmessage" style="display: none;">Your message has been sent. Thank you!</div>
+                <div id="errormessage" style="display: none;"></div>
+                <div class="loading" style="display: none;">Loading...</div>
+                <form id="contactForm" role="form" class="contactForm">
                   <div class="form-row"> 
                     <div class="form-group col-lg-6">
                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" /> 
@@ -138,7 +139,7 @@
   
                   <div class="form-group">
   
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
   
                     <div class="validation"></div>
   
@@ -146,7 +147,6 @@
                   <div class="text-center"><button type="submit" title="Send Message">Send Message</button>
                   </div>
                 
-                </div>
                 </form>
               </div>
             </div>
