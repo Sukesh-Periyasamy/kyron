@@ -1,14 +1,16 @@
 /**
  * Contact Form JavaScript
- * Handles form submission and validation for Kyron Healthcare contact form
- * Uses Formspree for secure form handling
+ * Handles form validation for Kyron Healthcare contact form
+ * Uses PHP backend for secure form processing
  */
 
 $(document).ready(function() {
   
-  // Form validation and submission
+  // Form validation before submission
   $('#contactForm').on('submit', function(e) {
-    e.preventDefault();
+    // Clear previous messages
+    $('#sendmessage').hide();
+    $('#errormessage').hide();
     
     // Get form data
     var name = $('#name').val().trim();
@@ -17,43 +19,39 @@ $(document).ready(function() {
     var message = $('#message').val().trim();
     
     // Basic validation
-    if (name === '' || email === '' || subject === '' || message === '') {
-      showMessage('Please fill in all fields.', 'error');
+    var errors = [];
+    
+    if (name === '' || name.length < 4) {
+      errors.push('Name must be at least 4 characters long.');
+    }
+    
+    if (email === '') {
+      errors.push('Email is required.');
+    } else if (!isValidEmail(email)) {
+      errors.push('Please enter a valid email address.');
+    }
+    
+    if (subject === '' || subject.length < 4) {
+      errors.push('Subject must be at least 4 characters long.');
+    }
+    
+    if (message === '') {
+      errors.push('Message is required.');
+    }
+    
+    // If there are errors, prevent submission and show them
+    if (errors.length > 0) {
+      e.preventDefault();
+      showMessage(errors.join('<br>'), 'error');
       return false;
     }
     
-    // Email validation
-    if (!isValidEmail(email)) {
-      showMessage('Please enter a valid email address.', 'error');
-      return false;
-    }
-    
-    // Show loading state
-    $('#sendmessage').hide();
-    $('#errormessage').hide();
+    // If validation passes, show loading state and allow form submission
     $('.loading').show();
+    $('#contactForm button[type="submit"]').prop('disabled', true).text('Sending...');
     
-    // Submit form to Formspree
-    var formData = new FormData(this);
-    
-    $.ajax({
-      url: 'https://formspree.io/f/xvgpgzjw',
-      method: 'POST',
-      data: formData,
-      processData: false,
-      contentType: false,
-      success: function(response) {
-        $('.loading').hide();
-        showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
-        $('#contactForm')[0].reset();
-      },
-      error: function(xhr, status, error) {
-        $('.loading').hide();
-        showMessage('Sorry, there was an error sending your message. Please try again or contact us directly at Info@kyronhealthcare.com', 'error');
-      }
-    });
-    
-    return false;
+    // Form will submit normally to PHP handler
+    return true;
   });
   
   // Email validation function
@@ -71,12 +69,26 @@ $(document).ready(function() {
       $('#errormessage').html(message).show();
       $('#sendmessage').hide();
     }
+    
+    // Scroll to message
+    $('html, body').animate({
+      scrollTop: $('#errormessage, #sendmessage').offset().top - 100
+    }, 500);
   }
   
   // Hide messages when user starts typing
   $('#contactForm input, #contactForm textarea').on('input', function() {
     $('#sendmessage').hide();
     $('#errormessage').hide();
+    // Re-enable submit button if it was disabled
+    $('#contactForm button[type="submit"]').prop('disabled', false).text('Send Message');
+    $('.loading').hide();
   });
+  
+  // Add required attributes for HTML5 validation as backup
+  $('#name').attr('required', true);
+  $('#email').attr('required', true);
+  $('#subject').attr('required', true);
+  $('#message').attr('required', true);
   
 });
