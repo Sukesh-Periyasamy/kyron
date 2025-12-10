@@ -26,124 +26,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-  
-  <style>
-    .coming-soon-section {
-      padding: 100px 0;
-      min-height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    }
-    
-    .coming-soon-container {
-      text-align: center;
-      background: white;
-      padding: 60px 40px;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .coming-soon-icon {
-      font-size: 4rem;
-      color: #007bff;
-      margin-bottom: 30px;
-      animation: pulse 2s infinite;
-    }
-    
-    .coming-soon-title {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, #007bff, #0056b3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .coming-soon-subtitle {
-      font-size: 1.5rem;
-      color: #34495e;
-      margin-bottom: 30px;
-      font-weight: 300;
-    }
-    
-    .coming-soon-description {
-      font-size: 1.1rem;
-      color: #7f8c8d;
-      line-height: 1.6;
-      margin-bottom: 40px;
-    }
-    
-    .notification-btn {
-      background: linear-gradient(135deg, #007bff, #0056b3);
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
-    }
-    
-    .notification-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(0, 123, 255, 0.4);
-      color: white;
-      text-decoration: none;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    
-    .floating-elements {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -1;
-    }
-    
-    .floating-elements::before,
-    .floating-elements::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(0, 123, 255, 0.1);
-      animation: float 6s ease-in-out infinite;
-    }
-    
-    .floating-elements::before {
-      width: 100px;
-      height: 100px;
-      top: 20%;
-      left: 10%;
-      animation-delay: 0s;
-    }
-    
-    .floating-elements::after {
-      width: 150px;
-      height: 150px;
-      bottom: 20%;
-      right: 10%;
-      animation-delay: 3s;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-  </style>
+  <link href="css/neonat.css" rel="stylesheet">
 </head>
 
 <header id="header" class="fixed-top">
@@ -159,7 +42,7 @@
         <li class="drop-down active"><a href="main_product.html">Products</a>
           <ul>
             <li><a href="neonatal.html">Neonatal and Pediatric Care</a></li>
-            <li class="active"><a href="respiassist.html">RespiAssist Advance</a></li>
+            <li class="active"><a href="respiassist.html">Adult and Pediatric Care</a></li>
             <li><a href="humidifier.html">Humidifier</a></li>
           </ul>
         </li>
@@ -172,25 +55,330 @@
 </header>
 
 <body>
-  <section class="coming-soon-section">
-    <div class="floating-elements"></div>
-    <div class="container">
-      <div class="coming-soon-container">
-        <div class="coming-soon-icon">
-          <i class="fa fa-rocket"></i>
+
+  <div class="row">
+    <div class="col-lg-12">
+        <div class="title-box">
+            <h2>RespiAssist Series – Non-Invasive Neonatal & Pediatric Ventilation System</h2>
         </div>
-        <h1 class="coming-soon-title">RespiAssist Advance</h1>
-        <h2 class="coming-soon-subtitle">Launching Soon</h2>
-        <p class="coming-soon-description">
-          We're putting the finishing touches on our revolutionary RespiAssist Advance system. 
-          This cutting-edge respiratory support technology will transform patient care with innovative features and enhanced performance.
-        </p>
-        <a href="bookademo.html" class="notification-btn">
-          <i class="fa fa-bell"></i> Get Notified
-        </a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container">    
+      
+      <div class="row about-container align-items-center">
+        <div class="col-lg-6">
+          <img style="width: 100%; max-width: 500px;" src="img/products/respiassist-advance.jpg" class="img-fluid" alt="RespiAssist Series">
+        </div>
+        <div class="col-lg-6">
+          <div class="product-info" style="padding: 20px;">
+            <h3 style="text-align: center; color: #007bff; margin-bottom: 15px;">RespiAssist Series</h3>
+            <h4 style="text-align: center; color: #333; margin-bottom: 10px;">Non-Invasive Neonatal & Pediatric Ventilation System</h4>
+            <h5 style="text-align: center; color: #666; margin-bottom: 20px;">Next-Generation NIV for NICU & PICU Settings</h5>
+            <p style="text-align: justify; line-height: 1.6;">
+              The RespiAssist Series by Kyron Healthcare is a next-generation Non-Invasive Ventilation (NIV) system designed for NICU & PICU settings. Compact, precise, and user-friendly, it provides advanced respiratory support for neonatal and pediatric patients through intelligent electronic air–oxygen blending, real-time monitoring, and multiple therapy modes.
+            </p>
+            <div class="text-center" style="margin-top: 20px;"> 
+              <a href="bookademo.html" class="btn btn-primary">Enquire About Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+
+  <section id="features" style="padding: 60px 0; background-color: #f8f9fa;">
+    <div class="container">
+      <header style="text-align: center; margin-bottom: 50px;" class="section-header">
+        <h3 style="font-size: 2rem; font-weight: 700; color: #2c3e50; margin-bottom: 10px;">
+          <i class="fa fa-star" style="color: #007bff; margin-right: 10px;"></i>KEY FEATURES
+        </h3>
+        <p style="color: #7f8c8d; font-size: 1.1rem; margin-top: 10px;">Advanced capabilities for superior patient care</p>
+      </header>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-desktop" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Advanced Display Options</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">5-inch or 8-inch color touchscreen display (model dependent) with intuitive interface</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #28a745, #1e7e34); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-hospital-o" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Complete NIV Solution</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Multiple therapy modes suitable for neonatal & pediatric patients</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #17a2b8, #117a8b); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-tint" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Advanced Electronic Blending</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Precise oxygen-air blending for accurate FiO₂ delivery (21–100%)</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #6c757d, #495057); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-cog" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Automatic Pressure Control</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Intelligent pressure management for optimal patient support</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #fd7e14, #dc6502); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-line-chart" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Real-Time Monitoring</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Continuous monitoring of FiO₂, flow & pressure parameters</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #28a745, #1e7e34); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-battery-full" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Extended Battery Backup</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Up to 4 hours battery backup for uninterrupted care</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #17a2b8, #117a8b); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-refresh" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Built-in Medical-Grade Blower</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Integrated turbine for reliable air supply</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #dc3545, #bd2130); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-bell" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Smart Alarm System</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Multi-color coded audio & visual alarms for enhanced safety</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #6610f2, #520dc2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-plug" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Standard Compatibility</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Compatible with standard patient circuits</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-card text-center" style="padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 12px; height: 100%; background: white; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: linear-gradient(135deg, #ffc107, #d39e00); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-bolt" style="font-size: 32px; color: white;"></i>
+            </div>
+            <h5 style="color: #2c3e50; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">Energy-Efficient Design</h5>
+            <p style="color: #7f8c8d; line-height: 1.6; margin: 0;">Low-power design for cost-effective operation</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <section style="padding: 60px 0; background-color: #ffffff;">
+    <div class="container">
+      <header style="text-align: center; margin-bottom: 50px;" class="section-header">
+        <h3 style="font-size: 2rem; font-weight: 700; color: #2c3e50; margin-bottom: 10px;">
+          <i class="fa fa-stethoscope" style="color: #007bff; margin-right: 10px;"></i>AVAILABLE THERAPY MODES
+        </h3>
+        <p style="color: #7f8c8d; font-size: 1.1rem; margin-top: 10px;">Comprehensive respiratory support options</p>
+      </header>
+
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <div style="background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 5px solid #007bff;">
+            <h4 style="color: #007bff; margin-bottom: 25px; font-size: 1.4rem; font-weight: 600;">Available in All Models</h4>
+            
+            <div class="row">
+              <div class="col-lg-4 mb-3">
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px; height: 100%;">
+                  <div style="display: flex; align-items: flex-start;">
+                    <i class="fa fa-circle" style="color: #007bff; font-size: 12px; margin-top: 8px; margin-right: 15px;"></i>
+                    <div>
+                      <h5 style="color: #2c3e50; margin-bottom: 10px; font-weight: 600;">Bubble CPAP</h5>
+                      <p style="color: #7f8c8d; margin: 0; line-height: 1.6;">Stable, accurate FiO₂ & flow to support lung expansion</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 mb-3">
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px; height: 100%;">
+                  <div style="display: flex; align-items: flex-start;">
+                    <i class="fa fa-circle" style="color: #007bff; font-size: 12px; margin-top: 8px; margin-right: 15px;"></i>
+                    <div>
+                      <h5 style="color: #2c3e50; margin-bottom: 10px; font-weight: 600;">nCPAP</h5>
+                      <p style="color: #7f8c8d; margin: 0; line-height: 1.6;">Continuous positive airway pressure via nasal mask/prongs</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 mb-3">
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px; height: 100%;">
+                  <div style="display: flex; align-items: flex-start;">
+                    <i class="fa fa-circle" style="color: #007bff; font-size: 12px; margin-top: 8px; margin-right: 15px;"></i>
+                    <div>
+                      <h5 style="color: #2c3e50; margin-bottom: 10px; font-weight: 600;">HFNC</h5>
+                      <p style="color: #7f8c8d; margin: 0; line-height: 1.6;">High Flow Nasal Cannula - Warmed, humidified high-flow oxygen</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 35px; border-radius: 15px; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            <h4 style="color: white; margin-bottom: 25px; font-size: 1.4rem; font-weight: 600;"><i class="fa fa-star" style="margin-right: 10px;"></i>Model-Exclusive Modes (RespiAssist Pro Only)</h4>
+            
+            <div class="row">
+              <div class="col-lg-6 mb-3">
+                <div style="background: rgba(255,255,255,0.15); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px);">
+                  <div style="display: flex; align-items: flex-start;">
+                    <i class="fa fa-check-circle" style="font-size: 24px; margin-right: 15px; margin-top: 3px;"></i>
+                    <div>
+                      <h5 style="color: white; margin-bottom: 10px; font-weight: 600;">nSIPPV</h5>
+                      <p style="margin: 0; line-height: 1.6;">Synchronized intermittent positive pressure ventilation (up to 40 cmH₂O)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 mb-3">
+                <div style="background: rgba(255,255,255,0.15); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px);">
+                  <div style="display: flex; align-items: flex-start;">
+                    <i class="fa fa-check-circle" style="font-size: 24px; margin-right: 15px; margin-top: 3px;"></i>
+                    <div>
+                      <h5 style="color: white; margin-bottom: 10px; font-weight: 600;">nIPPV</h5>
+                      <p style="margin: 0; line-height: 1.6;">Intermittent positive pressure ventilation (up to 40 cmH₂O)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 60px 0; background-color: #f8f9fa;">
+    <div class="container">
+      <header style="text-align: center; margin-bottom: 50px;" class="section-header">
+        <h3 style="font-size: 2rem; font-weight: 700; color: #2c3e50; margin-bottom: 10px;">
+          <i class="fa fa-cogs" style="color: #007bff; margin-right: 10px;"></i>TECHNICAL SPECIFICATIONS
+        </h3>
+        <p style="color: #7f8c8d; font-size: 1.1rem; margin-top: 10px;">Detailed technical parameters for each model</p>
+      </header>
+
+      <div class="table1" style="max-width: 1000px; margin: 0 auto; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <table class="table table-striped table-bordered" style="color: #333; font-size: 14px; margin-bottom: 0;">
+          <thead style="background: linear-gradient(135deg, #007bff, #0056b3); color: white;">
+            <tr>
+              <th style="width: 30%; padding: 18px 15px; text-align: left; font-weight: 600; font-size: 15px;"><i class="fa fa-list-alt" style="margin-right: 8px;"></i>Parameter</th>
+              <th style="width: 23%; padding: 18px 15px; text-align: left; font-weight: 600; font-size: 15px;">RespiAssist</th>
+              <th style="width: 23%; padding: 18px 15px; text-align: left; font-weight: 600; font-size: 15px;">RespiAssist Advanced</th>
+              <th style="width: 24%; padding: 18px 15px; text-align: left; font-weight: 600; font-size: 15px;">RespiAssist Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-desktop" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Display</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">5-inch Touch Display</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">8-inch Touch Display with rotating knob</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">8-inch Touch Display with rotating knob</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-tachometer" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Flow Range</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">4–25 / 40 LPM</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">4–60 LPM</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">0–60 LPM</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-tint" style="color: #007bff; margin-right: 8px; width: 18px;"></i>FiO₂ Range</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">21–100%</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">21–100%</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">21–100%</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-compress" style="color: #007bff; margin-right: 8px; width: 18px;"></i>PEEP</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">1–10 cm H₂O</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">1–10 cm H₂O</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">1–10 cm H₂O</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-hand-pointer-o" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Trigger</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">—</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">—</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">0–10 L/min</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-flask" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Oxygen Gas Supply</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;" colspan="3">230 kPa to 600 kPa</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-cloud" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Air Supply</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;" colspan="3">Built-in medical-grade turbine</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-power-off" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Power Supply</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;" colspan="3">100–265V AC, 50/60Hz, 1A, 100 VA</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-battery-full" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Battery Backup</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">Up to 3 hours</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">Up to 4 hours</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;">Up to 4 hours</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #495057;"><i class="fa fa-shield" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Safety Standards</td>
+              <td style="padding: 15px; border-bottom: 1px solid #e9ecef;" colspan="3">IEC 60601-1, IEC 60601-1-2 & EMC compliant<br>Unit Type: Class 1, Type B, IP21</td>
+            </tr>
+            <tr>
+              <td style="padding: 15px; font-weight: 600; color: #495057;"><i class="fa fa-thermometer-half" style="color: #007bff; margin-right: 8px; width: 18px;"></i>Operating Conditions</td>
+              <td style="padding: 15px;" colspan="3">Temperature: 1°C to 50°C<br>Relative Humidity: 10–90% (non-condensing)<br>Atmospheric Pressure: 50–106 kPa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="button" style="margin: 50px 0; text-align: center;">
+    <a href="bookademo.html" class="link button1" style="display: inline-block; background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-size: 16px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);">
+      <i class="fa fa-envelope" style="margin-right: 10px;"></i>Enquire About Product
+    </a>
+  </div>
+
 </body>
 
 <!--==========================
