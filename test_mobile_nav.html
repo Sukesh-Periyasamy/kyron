@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Navigation Test - Kyron Healthcare</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+
+        .test-section h2 {
+            color: #004289;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .status.pass {
+            background: #28a745;
+            color: white;
+        }
+
+        .status.fail {
+            background: #dc3545;
+            color: white;
+        }
+
+        .status.pending {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .device-test {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .device-test i {
+            font-size: 40px;
+            color: #004289;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .resize-helper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 66, 137, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9990;
+        }
+
+        .content-area {
+            min-height: 200vh;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header class="fixed-top" id="header">
+        <div class="container">
+            <div class="logo float-left">
+                <a class="scrollto" href="#intro">
+                    <img alt="LOGO" class="img-fluid" src="img/logo_new.png" width="100">
+                </a>
+            </div>
+
+            <nav class="main-nav float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#intro">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="drop-down"><a href="main_product.html">Products</a>
+                        <ul>
+                            <li><a href="neonatal.html">Neonatal and Pediatric Care</a></li>
+                            <li><a href="respiassist.html">Adult and Pediatric Care</a></li>
+                            <li><a href="humidifier.html">Humidifier</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="bookademo.html">Book a Demo</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content-area" style="margin-top: 100px;">
+        <h1 style="color: #004289; text-align: center; margin-bottom: 30px;">
+            🔧 Mobile Navigation Test Page
+        </h1>
+
+        <div class="test-section">
+            <h2>📱 Device Testing Checklist</h2>
+            <div class="device-test">
+                <i class="fa fa-mobile"></i>
+                <strong>Mobile Phone</strong>
+                <div class="status pending">Test Pending</div>
+            </div>
+            <div class="device-test">
+                <i class="fa fa-tablet"></i>
+                <strong>Tablet</strong>
+                <div class="status pending">Test Pending</div>
+            </div>
+            <div class="device-test">
+                <i class="fa fa-desktop"></i>
+                <strong>Desktop (Small)</strong>
+                <div class="status pending">Test Pending</div>
+            </div>
+            <div class="device-test">
+                <i class="fa fa-desktop"></i>
+                <strong>Desktop (Large)</strong>
+                <div class="status pending">Test Pending</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ Functionality Checklist</h2>
+            <ul class="checklist">
+                <li>Hamburger icon is visible on mobile/tablet (width < 992px)</li>
+                <li>Hamburger icon is hidden on desktop (width ≥ 992px)</li>
+                <li>Clicking hamburger opens menu smoothly</li>
+                <li>Menu slides in from the left side</li>
+                <li>Overlay appears behind menu</li>
+                <li>Clicking overlay closes menu</li>
+                <li>Clicking X icon closes menu</li>
+                <li>Clicking a menu link closes menu and navigates</li>
+                <li>Dropdown menus expand/collapse correctly</li>
+                <li>Page doesn't scroll when menu is open</li>
+                <li>Menu closes when resizing to desktop width</li>
+                <li>All menu items are visible and clickable</li>
+                <li>Hover states work on menu items</li>
+                <li>Animations are smooth (no jerky movements)</li>
+                <li>No JavaScript errors in console</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🎨 Visual Design Checklist</h2>
+            <ul class="checklist">
+                <li>Hamburger button has blue background</li>
+                <li>Hamburger button is easily visible</li>
+                <li>Menu background is solid blue</li>
+                <li>Text is white and readable</li>
+                <li>Menu items have clear separation</li>
+                <li>Hover effects are visible</li>
+                <li>Dropdown arrows rotate smoothly</li>
+                <li>Overall design looks professional</li>
+                <li>Colors match healthcare branding</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>♿ Accessibility Checklist</h2>
+            <ul class="checklist">
+                <li>Hamburger button has aria-label</li>
+                <li>aria-expanded updates when menu opens/closes</li>
+                <li>Can tab through menu items with keyboard</li>
+                <li>Screen reader announces menu state</li>
+                <li>Color contrast is sufficient</li>
+                <li>Touch targets are at least 44x44px</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🌐 Browser Testing</h2>
+            <ul class="checklist">
+                <li>Google Chrome (Desktop & Mobile)</li>
+                <li>Safari (macOS & iOS)</li>
+                <li>Microsoft Edge</li>
+                <li>Firefox</li>
+                <li>Samsung Internet (Android)</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>📏 Responsive Testing Instructions</h2>
+            <p><strong>Method 1: Browser DevTools</strong></p>
+            <ol>
+                <li>Press <kbd>F12</kbd> to open DevTools</li>
+                <li>Press <kbd>Ctrl+Shift+M</kbd> (or <kbd>Cmd+Shift+M</kbd> on Mac) for device toolbar</li>
+                <li>Select different devices from dropdown</li>
+                <li>Test hamburger menu on each device size</li>
+            </ol>
+
+            <p><strong>Method 2: Manual Resize</strong></p>
+            <ol>
+                <li>Resize browser window to less than 992px wide</li>
+                <li>Hamburger menu should appear</li>
+                <li>Resize back to 992px or wider</li>
+                <li>Hamburger menu should disappear</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>🐛 Common Issues & Solutions</h2>
+            <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                <strong>Issue:</strong> Hamburger icon not visible<br>
+                <strong>Solution:</strong> Clear cache and hard refresh (Ctrl+Shift+R)
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                <strong>Issue:</strong> Menu doesn't open<br>
+                <strong>Solution:</strong> Check browser console for JavaScript errors
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                <strong>Issue:</strong> Menu opens but doesn't close<br>
+                <strong>Solution:</strong> Verify Font Awesome is loaded (check for X icon)
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 Test Results</h2>
+            <p>Record your test results here:</p>
+            <textarea style="width: 100%; height: 150px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"
+                placeholder="Enter test results, issues found, or notes here..."></textarea>
+        </div>
+    </div>
+
+    <!-- Window Size Helper -->
+    <div class="resize-helper">
+        <strong>Window Size:</strong><br>
+        Width: <span id="windowWidth">0</span>px<br>
+        Height: <span id="windowHeight">0</span>px<br>
+        <span id="breakpoint" style="font-weight: bold; color: #74b5fc;"></span>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Window size tracker
+        function updateWindowSize() {
+            var width = $(window).width();
+            var height = $(window).height();
+            $('#windowWidth').text(width);
+            $('#windowHeight').text(height);
+
+            if (width < 992) {
+                $('#breakpoint').text('📱 Mobile/Tablet View').css('color', '#28a745');
+            } else {
+                $('#breakpoint').text('🖥️ Desktop View').css('color', '#007bff');
+            }
+        }
+
+        $(document).ready(function () {
+            updateWindowSize();
+            $(window).resize(updateWindowSize);
+
+            // Log menu state changes
+            $(document).on('click', '.mobile-nav-toggle', function () {
+                console.log('Hamburger clicked. Menu state:', $('body').hasClass('mobile-nav-active') ? 'OPEN' : 'CLOSED');
+            });
+
+            console.log('%c✅ Mobile Navigation Test Page Loaded', 'color: green; font-size: 16px; font-weight: bold;');
+            console.log('%cResize the window or use DevTools to test different screen sizes', 'color: blue;');
+        });
+    </script>
+</body>
+
+</html>
