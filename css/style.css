@@ -453,8 +453,8 @@ height: 350px;
 
 .mobile-nav-toggle:hover {
   background: rgba(0, 66, 137, 1);
-  /* Scale without affecting positioning */
-  transform: scale(1.05);
+  /* Scale while preserving vertical centering (translateY applied in media query) */
+  transform: translateY(-50%) scale(1.05);
 }
 
 .mobile-nav-toggle i {
@@ -513,42 +513,52 @@ height: 350px;
    Mobile Hamburger Button Positioning Strategy
    ========================================================================
    
-   CURRENT APPROACH (Variant A): position: absolute inside #header .container
+   CURRENT APPROACH (Variant A): position: absolute + vertical centering inside #header .container
    - Best when: Header has position: relative/fixed/sticky (our case: #header has position: relative)
-   - Behavior: Button moves with header (e.g., if header scrolls or transforms)
-   - Pros: Button stays visually part of header, consistent with header positioning
+   - Behavior: Button vertically centered within header using top: 50% + translateY(-50%)
+   - Pros: Button stays visually centered in header, moves with header (e.g., if header scrolls or transforms)
    - Cons: If header is hidden/transformed, button goes with it
    
    ALTERNATIVE (Variant B): position: fixed anchored to viewport
    - Best when: Header is position: static OR you want button to remain visible during scroll
    - Behavior: Button stays fixed to viewport top-right regardless of header state
    - Pros: Always visible, even if header scrolls away or transforms
-   - Cons: Button not bound to header, may overlap content unexpectedly
-   - Implementation: Change `position: absolute` to `position: fixed` in media query below
+   - Cons: Button not bound to header, may overlap content unexpectedly, requires fixed top offset
+   - Implementation: Change `position: absolute` to `position: fixed` and use explicit `top: 12px` 
+     instead of `top: 50%; transform: translateY(-50%)` in media query below
    
    CURRENT HEADER STRUCTURE:
    - #header { position: relative; height: 75px; padding: 20px 0; }
    - #header .container { position: relative; } ← this is our positioning parent
    - Mobile-nav.js appends .mobile-nav-toggle to #header .container
    
+   VERTICAL CENTERING:
+   - top: 50% → positions top edge of button at header's vertical midpoint
+   - transform: translateY(-50%) → shifts button up by half its own height (25px), centering it
+   - This centers the 50×50 button within the header regardless of header height changes
+   
    OFFSET TUNING:
-   - top: 12px → aligns with header's vertical rhythm (header padding is 20px 0)
    - right: 15px → standard spacing from edge
-   - Adjust these if header padding changes or visual alignment needs tweaking
+   - Adjust if header padding changes or visual alignment needs tweaking
+   - Do NOT add margin-top or fixed top values as they will break vertical centering
    
    ======================================================================== */
 
 /* Ensure hamburger menu is visible and properly anchored on mobile and tablet */
 @media (max-width: 991px) {
-  /* Anchor hamburger button to header top-right
+  /* Anchor hamburger button to header top-right and vertically center it
    * Since #header has position: relative and #header .container also has position: relative,
    * we anchor the button absolute inside the container for proper header alignment.
+   * Using top: 50% + transform: translateY(-50%) to vertically center the button within header.
    * Alternative: use position: fixed for viewport-anchoring if button should stay visible during scroll */
   .mobile-nav-toggle {
     display: flex !important;
-    position: absolute;  /* anchors relative to #header .container */
-    top: 12px;           /* offset from top of header - adjust to align with header padding (header has padding: 20px 0) */
-    right: 15px;         /* offset from right edge - maintains spacing from edge */
+    position: absolute;       /* anchors relative to #header .container */
+    top: 50%;                 /* position halfway down the header */
+    right: 15px;              /* offset from right edge - maintains spacing from edge */
+    transform: translateY(-50%); /* vertically center the 50px button */
+    margin: 0;                /* remove any margin that could push it down */
+    padding: 0;               /* ensure no padding affects positioning */
     /* z-index: 9998 already set in base styles above - ensures button sits above page content */
   }
 
