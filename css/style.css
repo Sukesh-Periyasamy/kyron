@@ -440,12 +440,14 @@ height: 350px;
   font-size: 28px;
   transition: all 0.4s ease;
   outline: none !important;
-  line-height: 1;
+  /* Remove line-height to avoid conflicts with flex centering */
+  line-height: 0;
   cursor: pointer;
   text-align: center;
   width: 50px;
   height: 50px;
   border-radius: 5px;
+  /* Button is flex container to center the <i> element */
   display: none;
   align-items: center;
   justify-content: center;
@@ -458,9 +460,26 @@ height: 350px;
 }
 
 .mobile-nav-toggle i {
+  /* Make <i> a flex container that fills the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  padding: 0;
   color: #fff;
   font-size: 24px;
+  /* Reset line-height for proper flex centering */
+  line-height: 1;
+}
+
+/* Fix Font Awesome ::before pseudo-element alignment */
+.mobile-nav-toggle i::before {
+  /* Make pseudo-element block-level so it participates in flex centering */
+  display: block;
+  /* Reset any inherited line-height from Font Awesome */
+  line-height: 1;
 }
 
 .mobile-nav-overly {
