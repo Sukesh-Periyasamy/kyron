@@ -430,10 +430,7 @@ height: 350px;
 }
 
 .mobile-nav-toggle {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  /* Base styles (positioning applied in media query below) */
   z-index: 9998;
   border: 0;
   background: rgba(0, 66, 137, 0.9);
@@ -456,7 +453,8 @@ height: 350px;
 
 .mobile-nav-toggle:hover {
   background: rgba(0, 66, 137, 1);
-  transform: translateY(-50%) scale(1.05);
+  /* Scale without affecting positioning */
+  transform: scale(1.05);
 }
 
 .mobile-nav-toggle i {
@@ -511,14 +509,59 @@ height: 350px;
   color: #fff;
 }
 
-/* Ensure hamburger menu is visible on mobile and tablet */
+/* ========================================================================
+   Mobile Hamburger Button Positioning Strategy
+   ========================================================================
+   
+   CURRENT APPROACH (Variant A): position: absolute inside #header .container
+   - Best when: Header has position: relative/fixed/sticky (our case: #header has position: relative)
+   - Behavior: Button moves with header (e.g., if header scrolls or transforms)
+   - Pros: Button stays visually part of header, consistent with header positioning
+   - Cons: If header is hidden/transformed, button goes with it
+   
+   ALTERNATIVE (Variant B): position: fixed anchored to viewport
+   - Best when: Header is position: static OR you want button to remain visible during scroll
+   - Behavior: Button stays fixed to viewport top-right regardless of header state
+   - Pros: Always visible, even if header scrolls away or transforms
+   - Cons: Button not bound to header, may overlap content unexpectedly
+   - Implementation: Change `position: absolute` to `position: fixed` in media query below
+   
+   CURRENT HEADER STRUCTURE:
+   - #header { position: relative; height: 75px; padding: 20px 0; }
+   - #header .container { position: relative; } ← this is our positioning parent
+   - Mobile-nav.js appends .mobile-nav-toggle to #header .container
+   
+   OFFSET TUNING:
+   - top: 12px → aligns with header's vertical rhythm (header padding is 20px 0)
+   - right: 15px → standard spacing from edge
+   - Adjust these if header padding changes or visual alignment needs tweaking
+   
+   ======================================================================== */
+
+/* Ensure hamburger menu is visible and properly anchored on mobile and tablet */
 @media (max-width: 991px) {
+  /* Anchor hamburger button to header top-right
+   * Since #header has position: relative and #header .container also has position: relative,
+   * we anchor the button absolute inside the container for proper header alignment.
+   * Alternative: use position: fixed for viewport-anchoring if button should stay visible during scroll */
   .mobile-nav-toggle {
     display: flex !important;
+    position: absolute;  /* anchors relative to #header .container */
+    top: 12px;           /* offset from top of header - adjust to align with header padding (header has padding: 20px 0) */
+    right: 15px;         /* offset from right edge - maintains spacing from edge */
+    /* z-index: 9998 already set in base styles above - ensures button sits above page content */
   }
 
   .main-nav {
     display: none !important;
+  }
+}
+
+/* Accessibility: maintain minimum touch target on very small screens */
+@media (max-width: 420px) {
+  .mobile-nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
