@@ -378,9 +378,38 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav><!-- .main-nav -->
+
+      <!-- Mobile Navigation Toggle -->
+      <button type="button" class="mobile-nav-toggle d-lg-none" aria-label="Toggle mobile menu" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
       
     </div>
   </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay"></div>
+
+  <!-- Mobile Navigation Menu -->
+  <nav class="mobile-nav d-lg-none">
+    <button type="button" class="mobile-nav-close" aria-label="Close mobile menu">
+      <i class="fa fa-times"></i>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="#">About Us</a></li>
+      <li class="drop-down"><a href="main_product.html">Products</a>
+        <ul>
+          <li><a href="neonatal.html">Neonatal and Pediatric Care</a></li>
+          <li><a href="respiassist.html">Adult and Pediatric Care</a></li>
+          <li><a href="humidifier.html">Humidifier</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="bookademo.html">Book a Demo</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
 
 <body>
@@ -521,12 +550,14 @@
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 <!-- Contact Form JavaScript File -->
 <script src="contactform/contactform.js"></script>
 
 <!--  Main Javascript File -->
+<!-- Mobile Navigation JavaScript File -->
+<script src="lib/mobile-nav/mobile-nav.js"></script>
+
 <script src="js/main.js"></script>
 
 <script type="text/javascript">
