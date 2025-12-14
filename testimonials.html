@@ -7,6 +7,9 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://www.google.com https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http:; frame-src 'self' https://www.google.com https://maps.google.com https://maps.googleapis.com; connect-src 'self' https://maps.googleapis.com https://cdnjs.cloudflare.com; form-action 'self';">
+
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -107,11 +110,14 @@
   position: relative;
   width: 100%;
   height: 600px;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   background: #fff;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .testimonial-slide {
@@ -127,6 +133,7 @@
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 .testimonial-slide.active {
@@ -141,6 +148,11 @@
   border-radius: 10px;
   max-width: 100%;
   max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
 }
 
 .carousel-btn {
@@ -206,10 +218,14 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .carousel-container {
-    height: 450px;
-    margin: 0 15px;
+@media (max-width: 991px) {
+  #testimonials {
+    padding: 80px 0 60px 0 !important;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
+    padding: 0 15px;
   }
   
   .section-header h3 {
@@ -218,58 +234,170 @@
   
   .section-header p {
     font-size: 16px;
-    padding: 0 15px;
-  }
-  
-  .carousel-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 16px;
-  }
-  
-  .prev-btn {
-    left: 15px;
-  }
-  
-  .next-btn {
-    right: 15px;
+    padding: 0 10px;
   }
   
   .testimonials-carousel {
     max-width: 100%;
+    padding: 0 10px;
   }
-}
-
-@media (max-width: 480px) {
+  
   .carousel-container {
-    height: 350px;
-    margin: 0 10px;
+    height: auto;
+    min-height: 400px;
+    max-height: 500px;
+    margin: 0 auto;
   }
   
-  .section-header h3 {
-    font-size: 24px;
+  .testimonial-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    padding: 10px;
   }
   
-  .section-header p {
-    font-size: 14px;
+  .testimonial-slide {
+    padding: 15px;
+    position: relative;
   }
   
   .carousel-btn {
     width: 40px;
     height: 40px;
     font-size: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
   
   .prev-btn {
-    left: 10px;
+    left: 5px;
   }
   
   .next-btn {
-    right: 10px;
+    right: 5px;
+  }
+  
+  .carousel-dots {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  #testimonials {
+    padding: 70px 0 50px 0 !important;
+  }
+  
+  .section-header h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    font-size: 15px;
+  }
+  
+  .carousel-container {
+    min-height: 350px;
+    max-height: 450px;
+    border-radius: 10px;
+    margin: 0 5px;
+  }
+  
+  .testimonial-image {
+    max-height: 450px;
+    padding: 15px;
   }
   
   .testimonial-slide {
-    padding: 15px;
+    padding: 10px;
+  }
+  
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+  
+  .prev-btn {
+    left: 5px;
+  }
+  
+  .next-btn {
+    right: 5px;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 6px;
+  }
+}
+
+@media (max-width: 574px) {
+  #testimonials {
+    padding: 60px 0 40px 0 !important;
+  }
+  
+  .section-header {
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+  
+  .section-header h3 {
+    font-size: 22px;
+  }
+  
+  .section-header p {
+    font-size: 14px;
+  }
+  
+  .testimonials-carousel {
+    padding: 0 5px;
+  }
+  
+  .carousel-container {
+    min-height: 300px;
+    max-height: 400px;
+    border-radius: 8px;
+    margin: 0;
+  }
+  
+  .testimonial-image {
+    max-height: 400px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .testimonial-slide {
+    padding: 5px;
+  }
+  
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .prev-btn {
+    left: 3px;
+  }
+  
+  .next-btn {
+    right: 3px;
+  }
+  
+  .carousel-dots {
+    margin-top: 15px;
+  }
+  
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
   }
 }
 
@@ -344,7 +472,7 @@
 <body>
   
   <!-- Main Content Section -->
-  <section id="testimonials" class="section-bg" style="padding: 100px 0 80px 0;">
+  <section id="testimonials" class="section-bg">
     <div class="container">
       
       <header class="section-header">
