@@ -104,6 +104,7 @@
   position: relative;
   max-width: 900px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .carousel-container {
@@ -118,6 +119,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 600px;
+  padding: 0;
 }
 
 .testimonial-slide {
@@ -131,35 +134,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0;
   box-sizing: border-box;
   overflow: visible;
+  text-align: center;
+}
+
+.testimonial-slide img {
+  margin: 0 auto;
+  display: block;
+  width: auto;
+  height: auto;
 }
 
 .testimonial-slide.active {
   opacity: 1;
+  z-index: 2;
+}
+
+.testimonial-slide:not(.active) {
+  z-index: 1;
 }
 
 .testimonial-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  width: auto !important;
+  height: auto !important;
+  max-width: 98% !important;
+  max-height: 98% !important;
+  min-width: 95% !important;
+  min-height: 95% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
   border-radius: 10px;
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: 0 auto;
+  display: block !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   image-rendering: high-quality;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   color: #333;
   border: 2px solid #ddd;
   width: 50px;
@@ -168,8 +191,11 @@
   cursor: pointer;
   font-size: 18px;
   transition: all 0.3s ease;
-  z-index: 10;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 15;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-btn:hover {
@@ -221,6 +247,7 @@
 @media (max-width: 991px) {
   #testimonials {
     padding: 80px 0 60px 0 !important;
+    margin-top: 60px !important;
   }
   
   .section-header {
@@ -239,27 +266,59 @@
   
   .testimonials-carousel {
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0;
   }
   
   .carousel-container {
     height: auto;
-    min-height: 400px;
-    max-height: 500px;
+    min-height: 550px;
+    max-height: 650px;
     margin: 0 auto;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .testimonial-image {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-    padding: 10px;
+    width: auto !important;
+    max-width: 98% !important;
+    min-width: 95% !important;
+    height: auto !important;
+    max-height: 98% !important;
+    min-height: 95% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: block !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .testimonial-slide {
-    padding: 15px;
+    padding: 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .testimonial-slide img {
+    margin: 0 auto !important;
+    max-width: 98% !important;
+    min-width: 95% !important;
+    max-height: 98% !important;
+    min-height: 95% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .carousel-btn {
@@ -287,6 +346,7 @@
 @media (max-width: 767px) {
   #testimonials {
     padding: 70px 0 50px 0 !important;
+    margin-top: 60px !important;
   }
   
   .section-header h3 {
@@ -299,19 +359,54 @@
   }
   
   .carousel-container {
-    min-height: 350px;
-    max-height: 450px;
+    min-height: 500px;
+    max-height: 600px;
     border-radius: 10px;
     margin: 0 5px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .testimonial-image {
-    max-height: 450px;
-    padding: 15px;
+    max-height: 98% !important;
+    min-height: 95% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    width: auto !important;
+    max-width: 98% !important;
+    min-width: 95% !important;
+    height: auto !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .testimonial-slide {
-    padding: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .testimonial-slide img {
+    margin: 0 auto !important;
+    max-width: 98% !important;
+    min-width: 95% !important;
+    max-height: 98% !important;
+    min-height: 95% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .carousel-btn {
@@ -338,6 +433,7 @@
 @media (max-width: 574px) {
   #testimonials {
     padding: 60px 0 40px 0 !important;
+    margin-top: 55px !important;
   }
   
   .section-header {
@@ -354,25 +450,61 @@
   }
   
   .testimonials-carousel {
-    padding: 0 5px;
+    padding: 0;
   }
   
   .carousel-container {
-    min-height: 300px;
-    max-height: 400px;
+    min-height: 450px;
+    max-height: 550px;
     border-radius: 8px;
     margin: 0;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .testimonial-image {
-    max-height: 400px;
-    padding: 20px;
-    width: 100%;
-    height: auto;
+    max-height: 98% !important;
+    min-height: 95% !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: 98% !important;
+    min-width: 95% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .testimonial-slide {
-    padding: 5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  
+  .testimonial-slide img {
+    margin: 0 auto !important;
+    max-width: 98% !important;
+    min-width: 95% !important;
+    max-height: 98% !important;
+    min-height: 95% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .carousel-btn {
@@ -403,7 +535,6 @@
 
 </style>
   </head>
-<br><br>
 
   <header id="header" class="fixed-top">
     <div class="container">
@@ -472,7 +603,7 @@
 <body>
   
   <!-- Main Content Section -->
-  <section id="testimonials" class="section-bg">
+  <section id="testimonials" class="section-bg" style="margin-top: 60px;">
     <div class="container">
       
       <header class="section-header">
@@ -481,7 +612,7 @@
       </header>
 
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-10 col-xl-8">
           
           <!-- Testimonials Carousel -->
           <div class="testimonials-carousel">
@@ -583,7 +714,6 @@
 <script src="lib/jquery/jquery-migrate.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="lib/easing/easing.min.js"></script>
-<script src="lib/mobile-nav/mobile-nav.js"></script>
 <script src="lib/wow/wow.min.js"></script>
 <script src="lib/waypoints/waypoints.min.js"></script>
 <script src="lib/counterup/counterup.min.js"></script>
@@ -594,10 +724,10 @@
 <!-- Contact Form JavaScript File -->
 <script src="contactform/contactform.js"></script>
 
-<!--  Main Javascript File -->
 <!-- Mobile Navigation JavaScript File -->
 <script src="lib/mobile-nav/mobile-nav.js"></script>
 
+<!--  Main Javascript File -->
 <script src="js/main.js"></script>
 
 <script type="text/javascript">
